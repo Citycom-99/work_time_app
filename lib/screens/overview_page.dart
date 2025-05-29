@@ -34,7 +34,11 @@ class _OverviewPageState extends State<OverviewPage> {
       setState(() {
         _months.insert(0, 'Alle'); // Füge "Alle" an die erste Position ein
         _months.addAll(months);
-        final initialMonthLabel = 'Alle'; // Standardmäßig "Alle" auswählen
+
+        // Aktueller Monat als Standard statt "Alle"
+        final currentMonthKey = DateFormat('yyyy-MM').format(now); // Schlüssel verwenden, nicht Label
+        final initialMonthLabel = currentMonthKey; // Standardmäßig aktuellen Monat auswählen
+
         Provider.of<WorkTimeController>(context, listen: false)
             .updateSelectedMonth(initialMonthLabel);
       });
