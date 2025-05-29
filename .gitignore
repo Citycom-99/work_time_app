@@ -1,0 +1,42 @@
+# Flutter/Dart/Pub related
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+
+# Android related
+/android/.gradle/
+/android/app/build/
+/android/local.properties
+
+# iOS related
+/ios/Pods/
+/ios/Flutter/Flutter.framework/
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/Generated.xcconfig
+/ios/Flutter/App.framework
+/ios/Flutter/Flutter.podspec
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# VS Code settings (optional)
+/.vscode/
+
+# Miscellaneous
+*.log
+*.lock
+*.class
+*.swp
+.DS_Store
+
+# Misc folders and files
+**/doc/api/
+.swiftpm/
+migrate_working_dir/
