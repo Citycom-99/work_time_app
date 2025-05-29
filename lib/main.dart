@@ -30,6 +30,15 @@ class WorkTimeApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           useMaterial3: true,
         ),
+        // 24h Format für alle Plattformen erzwingen (löst AM/PM Problem)
+        builder: (context, child) {
+          return MediaQuery(
+            data: MediaQuery.of(context).copyWith(
+              alwaysUse24HourFormat: true,
+            ),
+            child: child!,
+          );
+        },
         initialRoute: '/splash', // Starte mit Splash Screen
         routes: {
           '/splash': (context) => const SplashScreen(), // Neue Route für Splash Screen
